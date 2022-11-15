@@ -1,0 +1,860 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ئاچىل تورى</title>
+    <link rel="stylesheet" href="./css/all.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+        integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <style>
+        body {
+            font-family: Alp ekran;
+            font-size: 17px;
+
+
+        }
+
+        .name {
+            height: 150px;
+
+        }
+
+        .name p {
+            display: inline-block;
+        }
+
+
+
+        .name .algilamak {
+            padding-top: 40px;
+            padding-left: 60px;
+        }
+
+        .name .fas {
+            margin: 0px 8px 0px 4px;
+        }
+
+        .menubar {
+            width: 97.5%;
+            margin: 0px auto;
+            overflow: hidden;
+            background-color: #E3E2DF;
+            position: relative;
+            top: -50px;
+
+        }
+
+        .menubar .search {
+            float: left;
+            margin-top: 10px;
+            margin-left: 30px;
+        }
+
+        .menubar ul {
+            list-style-type: none;
+            margin-top: 0px;
+
+        }
+
+        .menubar li {
+            float: right;
+
+        }
+
+        .menubar a {
+            display: block;
+            text-decoration: none;
+            color: black;
+            padding: 10px;
+            margin-left: 10px;
+        }
+
+        .menubar .active a {
+            color: white;
+        }
+
+        .menubar .active,
+        .menubar a:hover {
+            background-color: #9A1750;
+            color: white;
+        }
+
+        .search input {
+            position: relative;
+            left: 4.5px;
+        }
+
+        .tizimlik {
+            float: right;
+            direction: rtl;
+            height: 630px;
+            width: 250px;
+            background-color: white;
+            border: 2px #b8b0b073 transparent;
+            overflow: hidden;
+            margin-right: 16px;
+            box-shadow: 0px 0px 5px rgb(88, 88, 88);
+        }
+
+        .tizimlik ul {
+            list-style-type: none;
+            float: right;
+            position: relative;
+            top: -18px;
+            left: 5px;
+            box-sizing: border-box;
+
+        }
+
+        .tizimlik ul li {
+            border-bottom: 1px #b1abab solid;
+            margin: 15px auto;
+            box-sizing: border-box;
+        }
+
+        .tizimlik ul li a {
+            text-decoration: none;
+            color: black;
+
+        }
+
+        .tizimlik ul li:hover {
+            background-color: #9A1750;
+        }
+
+        .tizimlik ul li a:hover {
+            color: white;
+        }
+
+        .tizimlik ul .last {
+            border-bottom: transparent;
+        }
+
+        .tizimlik div {
+            height: 50px;
+            width: 100%;
+            background-color: #9A1750;
+            padding: 13px 0px;
+            color: white;
+            text-align: right;
+            padding-right: 30px;
+            box-sizing: border-box;
+            font-family: Alkatip asliye;
+
+        }
+
+        .tizimlik ul li .fas {
+            font-size: 10px;
+            color: #636363;
+            float: left;
+            display: block;
+            position: relative;
+            top: 8.5px;
+        }
+
+        .tizimlik ul li .fas:hover {
+            color: white;
+        }
+
+        .tizimlik .list1 {
+            display: none;
+        }
+
+        .tizimlik .falist1:hover .list1 {
+            display: block;
+
+        }
+
+        .tizimlik .list1:hover .list1 {
+            display: block;
+
+        }
+
+
+
+        .tizimlik .list1 {
+            background-color: #E3E2DF;
+            height: 180px;
+        }
+
+        .tizimlik .list1 ul {
+            float: right;
+            padding: 0;
+            margin: 0;
+        }
+
+        .tizimlik .list1 ul li {
+            position: relative;
+            left: 16px;
+            border-bottom: 2px dotted #9A1750;
+        }
+
+        .tizimlik .list1 a {
+            font-size: 10px;
+        }
+
+        /* list2 */
+        .tizimlik .list2 {
+            display: none;
+        }
+
+        .tizimlik .falist2:hover .list2 {
+            display: block;
+
+        }
+
+        .tizimlik .list2:hover .list2 {
+            display: block;
+
+        }
+
+
+
+        .tizimlik .list2 {
+            background-color: #E3E2DF;
+            height: 180px;
+        }
+
+        .tizimlik .list2 ul {
+            float: right;
+            padding: 0;
+            margin: 0;
+        }
+
+        .tizimlik .list2 ul li {
+            position: relative;
+            left: 16px;
+            border-bottom: 2px dotted #9A1750;
+        }
+
+        .tizimlik .list2 a {
+            font-size: 10px;
+        }
+
+        /* list3 */
+        .tizimlik .list3 {
+            display: none;
+        }
+
+        .tizimlik .falist3:hover .list3 {
+            display: block;
+
+        }
+
+        .tizimlik .list3:hover .list3 {
+            display: block;
+
+        }
+
+
+
+        .tizimlik .list3 {
+            background-color: #E3E2DF;
+            height: 150px;
+        }
+
+        .tizimlik .list3 ul {
+            float: right;
+            padding: 0;
+            margin: 0;
+        }
+
+        .tizimlik .list3 ul li {
+            position: relative;
+            left: 16px;
+            border-bottom: 2px dotted #9A1750;
+        }
+
+        .tizimlik .list3 a {
+            font-size: 12px;
+        }
+
+
+        /* list4 */
+        .tizimlik .list4 {
+            display: none;
+        }
+
+        .tizimlik .falist4:hover .list4 {
+            display: block;
+
+        }
+
+        .tizimlik .list4:hover .list4 {
+            display: block;
+
+        }
+
+
+
+        .tizimlik .list4 {
+            background-color: #E3E2DF;
+            height: 150px;
+        }
+
+        .tizimlik .list4 ul {
+            float: right;
+            padding: 0;
+            margin: 0;
+        }
+
+        .tizimlik .list4 ul li {
+            position: relative;
+            left: 16px;
+            border-bottom: 2px dotted #9A1750;
+        }
+
+        .tizimlik .list4 a {
+            font-size: 12px;
+        }
+
+        .lunbo img {
+            height: 630px;
+        }
+
+        .intro1 {
+
+            width: 98%;
+            margin: 0px auto;
+            overflow: hidden;
+            margin-top: 50px;
+
+
+        }
+
+        .intro1 .color1 {
+            height: 70px;
+            width: 10px;
+            background-color: #EE4C7C;
+            float: right;
+            margin-right: 30px;
+            border-radius: 10px;
+
+        }
+
+        .intro1 .text1 {
+            float: right;
+            width: 200px;
+            position: relative;
+            right: -30px;
+        }
+
+        .intro1 .text2 {
+            float: left;
+            width: 200px;
+
+        }
+
+        .intro1 .text1 a {
+            color: black;
+            font-size: 20px;
+            text-decoration: none;
+        }
+
+        .intro1 .text2 a {
+            color: black;
+            font-size: 20px;
+            text-decoration: none;
+        }
+
+        .intro1 .text2 a:hover {
+            color: #EE4C7C;
+            font-size: 22px;
+        }
+
+        .product1 {
+            overflow: hidden;
+            margin-left: 20px;
+            box-sizing: border-box;
+
+        }
+
+        .product1 .pro1 {
+            border: 1px #636363 solid;
+            height: 500px;
+            margin-right: 45px;
+            float: left;
+            width: 320px;
+        }
+
+        .product1 .pro1 img {
+            padding: 10px 10px;
+            display: block;
+        }
+
+        .footer ul {
+            display: inline-block;
+            list-style-type: none;
+            position: relative;
+            top: -5px;
+
+        }
+
+        .footer ul li {
+            color: white;
+            margin-bottom: 5px;
+        }
+
+        .footer ul a {
+            color: white;
+            text-decoration: none;
+            list-style-position: outside;
+        }
+
+        .footer ul li a:hover {
+            background-color: white;
+            color: #5D001E;
+        }
+
+        .footer .fab,
+        .footer .fas {
+            margin-right: 8px;
+        }
+
+        .name audio {
+            display: block;
+            float: right;
+            margin-top: 45px;
+            position: relative;
+            right: -60px;
+        }
+       
+    </style>
+</head>
+
+<body>
+    <div class="name">
+        <a
+            href="file:///C:/Users/ab%C4%B1de/Desktop/%D8%A6%D8%A7%DA%86%D9%89%D9%84%20%D8%AA%D9%88%D8%B1%D9%89%20(6).html"><img
+                style="float: right;display: block; margin-bottom: 20px;margin-right: 0px;"
+                src="logo.jpg"
+                alt="" width="300px"></a>
+        <audio controls autoplay 
+            src="Bozkır Arslanı Celaleddin Jenerik Müziği.mp3"></audio>
+        <p class="algilamak"> <i class="far fa-handshake"></i>ئاچىل تور بېكىتىمىزغا خۇشكەلدىڭىز</p>
+    </div>
+    <div class="menubar">
+        <div class="search">
+            <form action="#">
+                <input type="text">
+                <button><i class="fas fa-search"></i></button>
+            </form>
+        </div>
+
+        <ul>
+            <li class="active"><a href="#">باش بەت</a></li>
+            <li><a href="http://toshkentchinni.uz/">پالىيەتلىك ماللار</a></li>
+            <li><a href="http://toshkentchinni.uz/">باھاسى چۈشۈرۈلگەن ماللار</a></li>
+            <li><a href="http://toshkentchinni.uz/">يېڭى ماللار</a></li>
+            <li><a href="http://toshkentchinni.uz/">خەۋەرلەر</a></li>
+            <li><a href="http://toshkentchinni.uz/">ئالاقىلىشىڭ</a></li>
+            <li><a href="http://toshkentchinni.uz/">ھەققىمىزدە</a></li>
+        </ul>
+
+    </div>
+
+    <div class="tizimlik">
+        <div>مەھسۇلات تۈرلىرى </div>
+        <!-- بىرىنچى قۇر -->
+        <ul>
+
+            <li class="falist1"><a href="https://www.facebook.com/amir.abdulla.96780/photos_by">
+                    مىللىيچە فارفۇرلار
+                    <i class="fas fa-chevron-left"></i>
+                </a>
+                <div class="list1">
+                    <ul>
+                        <li><a
+                                href="http://toshkentchinni.uz/product-category/%d0%b0%d1%82%d0%bb%d0%b0%d1%81/">چىنە-قاچىلار</a>
+                        </li>
+                        <li><a href="http://toshkentchinni.uz/product-category/%d0%b0%d1%82%d0%bb%d0%b0%d1%81/">مىللىيچە
+                                چەينەكلەر</a></li>
+                        <li><a
+                                href="http://toshkentchinni.uz/product-category/%d0%b0%d1%82%d0%bb%d0%b0%d1%81/">قازان</a>
+                        </li>
+                        <li><a href="http://toshkentchinni.uz/product-category/%d0%b0%d1%82%d0%bb%d0%b0%d1%81/">پىشۇرۇق
+                                قېلىپلىرى</a></li>
+                    </ul>
+                </div>
+            </li>
+            <!-- ئىككىنچى قۇر -->
+            <li><a href="https://in.pinterest.com/pin/166140673724652586/">(رەخىت)ئەتلەس <i
+                        class="fas fa-chevron-left"></i> </a>
+            </li>
+            <!-- ئۈچىنچى قۇر -->
+            <li class="falist2"><a href="https://www.hepsiburada.com/ara?q=yorgan+nevresimi">يوتقان-كۆرپە قاپلىرى
+                    <i class="fas fa-chevron-left"></i>
+                </a>
+                <div class="list2">
+                    <ul>
+                        <li><a href="https://www.hepsiburada.com/ara?q=yorgan+nevresimi">يوتقان قاپلىرى</a></li>
+                        <li><a href="https://www.hepsiburada.com/ara?q=yorgan+nevresimi">ياستۇق قاپلىرى</a></li>
+                        <li><a href="https://www.hepsiburada.com/ara?q=yorgan+nevresimi">كارۋات ياپقۇچ</a></li>
+                        <li><a href="https://www.hepsiburada.com/ara?q=yorgan+nevresimi">گىلەم ياپقۇچ</a></li>
+                    </ul>
+                </div>
+            </li>
+            <!-- 4-قۇر -->
+            <li><a href="https://www.facebook.com/2268643300045978/posts/2669976306579340/">مېھمانلىق كۆرپە
+                    <i class="fas fa-chevron-left"></i>
+                </a></li>
+            <!-- 5-قۇر -->
+            <li><a href="https://www.hepsiburada.com/masa-ortuleri-c-9010107">داستىخانلار
+                    <i class="fas fa-chevron-left"></i></a></li>
+            <!-- 6-قۇر -->
+            <li class="falist3"><a
+                    href="https://www.google.com/search?q=%D8%AF%D9%88%D9%BE%D9%BE%D8%A7&sxsrf=AOaemvKrV2XAZEH8VfS8ZJRjRftQUpdT4A:1631986185893&source=lnms&tbm=isch&sa=X&ved=2ahUKEwjSh42nhonzAhXkh_0HHUSJCw4Q_AUoAnoECAIQBA&biw=1536&bih=722&dpr=1.25">دوپپا
+                    <i class="fas fa-chevron-left"></i> </a>
+                <div class="list3">
+                    <ul>
+                        <li><a href="https://tr.pinterest.com/semseddin75327/%D8%AF%D9%88%D9%BE%D9%BE%D8%A7/">ئەرلەر</a>
+                        </li>
+                        <li><a href="https://tr.pinterest.com/semseddin75327/%D8%AF%D9%88%D9%BE%D9%BE%D8%A7/">
+                                ئاياللار
+                        </li>
+                        <li><a
+                                href="https://tr.pinterest.com/semseddin75327/%D8%AF%D9%88%D9%BE%D9%BE%D8%A7/">كىچىكلەر</a>
+                        </li>
+
+                    </ul>
+                </div>
+            </li>
+            <!-- 7-قۇر -->
+            <li class="falist4"><a
+                    href="https://www.google.com/search?q=etles+kiyim+uzbekistan&sxsrf=AOaemvJP3Mw8RWEAbm2k_JOVAv3ox4JMmg:1631986298612&source=lnms&tbm=isch&sa=X&ved=2ahUKEwiD9ezchonzAhX1hv0HHb-qBbcQ_AUoAnoECAEQBA&biw=1536&bih=722&dpr=1.25">ئەتلەس
+                    كۆينەكلەر
+                    <i class="fas fa-chevron-left"></i>
+                </a>
+                <div class="list4">
+                    <ul>
+                        <li><a
+                                href="https://www.google.com/search?q=etles+kiyim+uzbekistan&sxsrf=AOaemvJP3Mw8RWEAbm2k_JOVAv3ox4JMmg:1631986298612&source=lnms&tbm=isch&sa=X&ved=2ahUKEwiD9ezchonzAhX1hv0HHb-qBbcQ_AUoAnoECAEQBA&biw=1536&bih=722&dpr=1.25">ئەرلەر</a>
+                        </li>
+                        <li><a
+                                href="https://www.google.com/search?q=etles+kiyim+uzbekistan&sxsrf=AOaemvJP3Mw8RWEAbm2k_JOVAv3ox4JMmg:1631986298612&source=lnms&tbm=isch&sa=X&ved=2ahUKEwiD9ezchonzAhX1hv0HHb-qBbcQ_AUoAnoECAEQBA&biw=1536&bih=722&dpr=1.25">
+                                ئاياللار
+                        </li>
+                        <li><a
+                                href="https://www.google.com/search?q=etles+kiyim+uzbekistan&sxsrf=AOaemvJP3Mw8RWEAbm2k_JOVAv3ox4JMmg:1631986298612&source=lnms&tbm=isch&sa=X&ved=2ahUKEwiD9ezchonzAhX1hv0HHb-qBbcQ_AUoAnoECAEQBA&biw=1536&bih=722&dpr=1.25">كىچىكلەر</a>
+                        </li>
+
+                    </ul>
+                </div>
+            </li>
+            <!-- 7-قۇر -->
+            <li><a
+                    href="https://www.google.com/search?q=%D8%A6%DB%95%D8%AA%D9%84%DB%95%D8%B3+%DA%AF%D8%A7%D9%84%D9%89%D8%B3%D8%AA%DB%87%D9%83&hl=zh-CN&sxsrf=AOaemvIG8f93P65-FsHLZKhydJGPhTY54Q:1631986484968&source=lnms&tbm=isch&sa=X&ved=2ahUKEwjaq9u1h4nzAhXVQeUKHczEAagQ_AUoAnoECAEQBA&biw=1536&bih=722&dpr=1.25">مىللىيچە
+                    گالىستۇك
+                    <i class="fas fa-chevron-left"></i>
+                </a></li>
+            <!-- 8-قۇر -->
+            <li><a
+                    href="https://www.google.com/search?q=%D8%A6%DB%95%D8%AA%D9%84%DB%95%D8%B3+%DA%AF%D8%A7%D9%84%D9%89%D8%B3%D8%AA%DB%87%D9%83&hl=zh-CN&sxsrf=AOaemvIG8f93P65-FsHLZKhydJGPhTY54Q:1631986484968&source=lnms&tbm=isch&sa=X&ved=2ahUKEwjaq9u1h4nzAhXVQeUKHczEAagQ_AUoAnoECAEQBA&biw=1536&bih=722&dpr=1.25">مىللىيچە
+                    شارپا
+                    <i class="fas fa-chevron-left"></i>
+                </a></li>
+            <li><a
+                    href="https://www.google.com/search?q=%D9%82%D9%88%D9%84%D9%8A%D8%A7%D8%BA%D9%84%D9%89%D9%82&tbm=isch&ved=2ahUKEwia7Z-6h4nzAhXdw7sIHflnDB4Q2-cCegQIABAA&oq=%D9%82%D9%88%D9%84%D9%8A%D8%A7%D8%BA%D9%84%D9%89%D9%82&gs_lcp=CgNpbWcQAzoKCCMQ7wMQ6gIQJzoHCCMQ7wMQJzoFCAAQgAQ6BAgAEB46BAgAEAE6BAgAEBNQ16MBWMTCAWDTxAFoAXAAeACAAdQCiAGeDpIBBzAuNS4zLjGYAQCgAQGqAQtnd3Mtd2l6LWltZ7ABCsABAQ&sclient=img&ei=PiNGYZrWHN2H7_UP-c-x8AE&bih=722&biw=1536&hl=zh-CN">مىللىيچە
+                    قولياغلىق
+                    <i class="fas fa-chevron-left"></i>
+                </a></li>
+            <li><a
+                    href="https://www.google.com/search?q=islamic+tablo+&tbm=isch&ved=2ahUKEwiXnorHh4nzAhVJybsIHf9LDsgQ2-cCegQIABAA&oq=islamic+tablo+&gs_lcp=CgNpbWcQAzIECAAQHjoKCCMQ7wMQ6gIQJzoFCAAQgAQ6BAgAEBNQm7oBWK3xAWC_8wFoAXAAeAGAAZgGiAH6LZIBCzItMi40LjMuMy4xmAEAoAEBqgELZ3dzLXdpei1pbWewAQrAAQE&sclient=img&ei=WSNGYdeNF8mS7_UP_5e5wAw&bih=722&biw=1536&hl=zh-CN">
+                    ھۆسىن خەتلىك لەۋھەلەر
+                    <i class="fas fa-chevron-left"></i>
+                </a></li>
+            <li><a
+                    href="https://www.google.com/search?q=east+turkistan+flag&tbm=isch&ved=2ahUKEwiVoeLXh4nzAhX6xrsIHUjwBiYQ2-cCegQIABAA&oq=east+turkistan+flag&gs_lcp=CgNpbWcQAzIFCAAQgAQyBggAEAoQGDoKCCMQ7wMQ6gIQJzoHCCMQ7wMQJzoECAAQHjoGCAAQBRAeOgYIABAMEB46BAgAEBhQmHBYsrYBYJK5AWgFcAB4A4ABjAuIAZVakgEQMi4wLjEuMi4xMi41LjEuMZgBAKABAaoBC2d3cy13aXotaW1nsAEKwAEB&sclient=img&ei=fCNGYZXzFvqN7_UPyOCbsAI&bih=722&biw=1536&hl=zh-CN">شەرقىي
+                    تۈركىستان بايرىقى
+                    <i class="fas fa-chevron-left"></i>
+                </a></li>
+            <li><a
+                    href="https://www.google.com/search?q=cup+for+gift&tbm=isch&ved=2ahUKEwic2ZLlh4nzAhWk4bsIHZWnBNIQ2-cCegQIABAA&oq=cup+for+gift&gs_lcp=CgNpbWcQAzIECAAQEzIECAAQEzIICAAQCBAeEBMyCAgAEAgQHhATMggIABAFEB4QEzIICAAQBRAeEBMyCAgAEAUQHhATMggIABAFEB4QEzIICAAQBRAeEBMyCAgAEAUQHhATOgoIIxDvAxDqAhAnOgcIIxDvAxAnOgUIABCABDoGCAAQDBAeOgQIABAeUO-LAViSyQFg6csBaAFwAHgAgAHjBogBjSmSAQc0LTEuMy40mAEAoAEBqgELZ3dzLXdpei1pbWewAQrAAQE&sclient=img&ei=mCNGYZytGqTD7_UPlc-SkA0&bih=722&biw=1536&hl=zh-CN">سوۋغاتلىق
+                    ئىستاكان
+                    <i class="fas fa-chevron-left"></i>
+                </a></li>
+            <li><a
+                    href="https://www.google.com/search?q=album+&tbm=isch&ved=2ahUKEwjIsKzzh4nzAhWEg_0HHXbKDxUQ2-cCegQIABAA&oq=album+&gs_lcp=CgNpbWcQAzIFCAAQgAQyBQgAEIAEMgUIABCABDIFCAAQgAQyBQgAEIAEMgUIABCABDIFCAAQgAQyBQgAEIAEMgUIABCABDIFCAAQgAQ6CggjEO8DEOoCECc6BwgjEO8DECc6BAgAEBNQsGFY-XxgsX9oAnAAeACAAYcEiAHbEJIBBzMtMS4zLjGYAQCgAQGqAQtnd3Mtd2l6LWltZ7ABCsABAQ&sclient=img&ei=tiNGYcj9DISH9u8P9pS_qAE&bih=722&biw=1536&hl=zh-CN">رەسىملىك
+                    ئالبۇم
+                    <i class="fas fa-chevron-left"></i>
+                </a></li>
+            <li class="last"><a
+                    href="https://www.google.com/search?q=islamic+toys+for+kids&tbm=isch&ved=2ahUKEwj9jK3-h4nzAhWgz7sIHT0_C5UQ2-cCegQIABAA&oq=islamic+toys+&gs_lcp=CgNpbWcQARgCMgQIABATMgQIABATMgQIABATMgYIABAeEBM6BwgjEO8DECc6BQgAEIAEOgoIIxDvAxDqAhAnOgQIABAeOggIABAIEB4QE1DpiAFYipsCYP6xAmgDcAB4BIABswOIAb4nkgEJMC41LjkuMi4zmAEAoAEBqgELZ3dzLXdpei1pbWewAQrAAQE&sclient=img&ei=zSNGYb3yEaCf7_UPvf6sqAk&bih=722&biw=1536&hl=zh-CN">
+                    ئىسلامىي باللار ئويۇنچۇقلىرى
+                    <i class="fas fa-chevron-left"></i>
+                </a></li>
+
+        </ul>
+    </div>
+
+    <div class="lunbo">
+        <div style="float: left;"><i style="font-size: 60px;margin-top: 300px;" class="fas fa-chevron-left"></i></div>
+        <img style="display: inline-block; margin-left: 15px; "
+            src="achil.jpg"
+            alt="" width="1115px  height: 630px;">
+        <div style="float: right; position: relative;right: 20px;"><i
+                style="font-size: 60px;margin-top: 300px; padding-left: 20px;" class="fas fa-chevron-right"></i></div>
+    </div>
+    <!-- first product introduction -->
+    <div class="intro1">
+        <div class="color1"></div>
+        <p style="position:relative;right:-100px;" class="text1">يېڭىلىق ماللار</p>
+        <p class="text2">
+            <a href="#"><i class="fas fa-chevron-left"></i>
+                تېخىمۇ كۆپ</a>
+        </p>
+    </div>
+
+    <div class="product1">
+        <div class="pro1"><img
+                src="pic11.jpg"
+                alt="" height="300px">
+            <h3 style="text-align: center;">قۇشۇق-ۋىلكا</h3>
+            <div style="width: 190px; background-color: #EE4C7C;height: 5px;margin-left: 50px;"></div>
+            <h3 style="direction: rtl; text-align: left; margin-left:20px ;margin-top: 35px;"> 36 پارچە 700₺ </h3>
+            <div
+                style="width: 130px; background-color: #EE4C7C;  height: 30px; color: white; float: right;text-align: center;position: relative;top: -50px;margin-right: 20px;padding-top: 10px;border-top-left-radius: 10px;border-top-right-radius: 10px;   ">
+                <i class="fas fa-shopping-cart"></i>
+                <a href="https://checkout.hepsiburada.com/sepetim" style="color: white; text-decoration: none;">
+                    ھارۋامغا سالاي</a>
+            </div>
+        </div>
+        <div class="pro1"><img
+                src="pic2.jpg"
+                alt="" height="300px">
+            <h3 style="text-align: center;">مېھمانلىق كۆرپە </h3>
+            <div style="width: 190px; background-color: #EE4C7C;height: 5px;margin-left: 50px;"></div>
+            <h3 style="direction: rtl; text-align: left; margin-left:20px ;margin-top: 35px;"> 1 پارچە 250₺ </h3>
+            <div
+                style="width: 130px; background-color: #EE4C7C;  height: 30px; color: white; float: right;text-align: center;position: relative;top: -50px;margin-right: 20px;padding-top: 10px;border-top-left-radius: 10px;border-top-right-radius: 10px;   ">
+                <i class="fas fa-shopping-cart"></i>
+                <a href="https://checkout.hepsiburada.com/sepetim" style="color: white; text-decoration: none;">
+                    ھارۋامغا سالاي</a>
+            </div>
+
+        </div>
+        <div class="pro1"><img
+                src="pic3.jpg"
+                alt="" height="300px">
+
+            <h3 style="text-align: center;">چەينەك-پىيالە</h3>
+            <div style="width: 190px; background-color: #EE4C7C;height: 5px;margin-left: 50px;"></div>
+            <h3 style="direction: rtl; text-align: left; margin-left:20px ;margin-top: 35px;"> 1 يۈرۈش 400₺ </h3>
+            <div
+                style="width: 130px; background-color: #EE4C7C;  height: 30px; color: white; float: right;text-align: center;position: relative;top: -50px;margin-right: 20px;padding-top: 10px;border-top-left-radius: 10px;border-top-right-radius: 10px;   ">
+                <i class="fas fa-shopping-cart"></i>
+                <a href="https://checkout.hepsiburada.com/sepetim" style="color: white; text-decoration: none;">
+                    ھارۋامغا سالاي</a>
+            </div>
+
+        </div>
+
+
+        <div class="pro1"><img
+                src="pic4.jpg"
+                alt="" height="300px">
+            <h3 style="text-align: center;">ماركىلىق سومكا</h3>
+            <div style="width: 190px; background-color: #EE4C7C;height: 5px;margin-left: 50px;"></div>
+            <h3 style="direction: rtl; text-align: left; margin-left:50px ;margin-top: 35px;"> 1 دانە 500₺</h3>
+            <div
+                style="width: 130px; background-color: #EE4C7C;  height: 30px; color: white; float: right;text-align: center;position: relative;top: -50px;margin-right: 20px;padding-top: 10px;border-top-left-radius: 10px;border-top-right-radius: 10px;   ">
+                <i class="fas fa-shopping-cart"></i>
+                <a href="https://checkout.hepsiburada.com/sepetim" style="color: white; text-decoration: none;">
+                    ھارۋامغا سالاي</a>
+            </div>
+
+        </div>
+
+    </div>
+    <!-- second product introduction -->
+    <div class="intro1">
+        <div class="color1"></div>
+        <p style="position:relative;right:-80px;" class="text1">پائالىيەتلىك ماللار</p>
+        <p class="text2">
+            <a href="#"><i class="fas fa-chevron-left"></i>
+                تېخىمۇ كۆپ</a>
+        </p>
+    </div>
+
+    <div class="product1">
+        <div class="pro1"><img
+                src="paliyet3.jpg"
+                alt="" height="300px">
+            <h3 style="text-align: center;">پىيالە</h3>
+            <div style="width: 190px; background-color: #EE4C7C;height: 5px;margin-left: 50px;"></div>
+            <h3 style="direction: rtl; text-align: left; margin-left:20px ;margin-top: 35px; font-size: 15px;"> 10
+                يۈرۈش400₺ <del style="color: red;"><sup>₺700</sup></del> </h3>
+            <div
+                style="width: 130px; background-color: #EE4C7C;  height: 30px; color: white; float: right;text-align: center;position: relative;top: -50px;margin-right: 20px;padding-top: 10px;border-top-left-radius: 10px;border-top-right-radius: 10px;   ">
+                <i class="fas fa-shopping-cart"></i>
+                <a href="https://checkout.hepsiburada.com/sepetim" style="color: white; text-decoration: none;">
+                    ھارۋامغا سالاي</a>
+            </div>
+        </div>
+        <div class="pro1"><img
+                src="paliyet4.jpg"
+                alt="" height="300px">
+            <h3 style="text-align: center;">چەينەك</h3>
+            <div style="width: 190px; background-color: #EE4C7C;height: 5px;margin-left: 50px;"></div>
+            <h3 style="direction: rtl; text-align: left; margin-left:20px ;margin-top: 35px;"> 1 دانە 100₺ <del
+                    style="color: red;"><sup>₺140</sup></del> </h3>
+            <div
+                style="width: 130px; background-color: #EE4C7C;  height: 30px; color: white; float: right;text-align: center;position: relative;top: -50px;margin-right: 20px;padding-top: 10px;border-top-left-radius: 10px;border-top-right-radius: 10px;   ">
+                <i class="fas fa-shopping-cart"></i>
+                <a href="https://checkout.hepsiburada.com/sepetim" style="color: white; text-decoration: none;">
+                    ھارۋامغا سالاي</a>
+            </div>
+
+        </div>
+        <div class="pro1"><img
+                src="baha3.jpg"
+                alt="" height="300px">
+
+            <h3 style="text-align: center;">ئەتلەس پەشتاما</h3>
+            <div style="width: 190px; background-color: #EE4C7C;height: 5px;margin-left: 50px;"></div>
+            <h3 style="direction: rtl; text-align: left; margin-left:10px ;margin-top: 35px;"> 10 دانە 200₺ <del
+                    style="color: red;"><sup>₺150</sup></del> </h3>
+            <div
+                style="width: 130px; background-color: #EE4C7C;  height: 30px; color: white; float: right;text-align: center;position: relative;top: -50px;margin-right: 20px;padding-top: 10px;border-top-left-radius: 10px;border-top-right-radius: 10px;   ">
+                <i class="fas fa-shopping-cart"></i>
+                <a href="https://checkout.hepsiburada.com/sepetim" style="color: white; text-decoration: none;">
+                    ھارۋامغا سالاي</a>
+            </div>
+
+        </div>
+
+
+        <div class="pro1"><img
+                src="baha2.jpg"
+                alt="" height="300px">
+            <h3 style="text-align: center;">تام نەقىش تابلو</h3>
+            <div style="width: 190px; background-color: #EE4C7C;height: 5px;margin-left: 50px;"></div>
+            <h3 style="direction: rtl; text-align: left; margin-left:20px ;margin-top: 35px;">1 دانە 240₺ <del
+                    style="color: red;"><sup>₺150</sup></del> </h3>
+            <div
+                style="width: 130px; background-color: #EE4C7C;  height: 30px; color: white; float: right;text-align: center;position: relative;top: -50px;margin-right: 20px;padding-top: 10px;border-top-left-radius: 10px;border-top-right-radius: 10px;   ">
+                <i class="fas fa-shopping-cart"></i>
+                <a href="https://checkout.hepsiburada.com/sepetim" style="color: white; text-decoration: none;">
+                    ھارۋامغا سالاي</a>
+            </div>
+
+        </div>
+
+    </div>
+
+    <!-- third product introduction -->
+    <div class="intro1">
+        <div class="color1"></div>
+        <p class="text1">باھاسى چۈشۈرۈلگەن ماللار</p>
+        <p class="text2">
+            <a href="#"><i class="fas fa-chevron-left"></i>
+                تېخىمۇ كۆپ</a>
+        </p>
+    </div>
+
+    <div class="product1">
+        <div class="pro1"><img
+                src="baha1.jpg"
+                alt="" height="300px">
+            <h3 style="text-align: center;">ئەتلەس ئاياغ</h3>
+            <div style="width: 190px; background-color: #EE4C7C;height: 5px;margin-left: 50px;"></div>
+            <h3 style="direction: rtl; text-align: left; margin-left:20px ;margin-top: 35px;"> 1 دانە 50₺ <del
+                    style="color: red;"><sup>₺90</sup></del> </h3>
+            <div
+                style="width: 130px; background-color: #EE4C7C;  height: 30px; color: white; float: right;text-align: center;position: relative;top: -50px;margin-right: 20px;padding-top: 10px;border-top-left-radius: 10px;border-top-right-radius: 10px;   ">
+                <i class="fas fa-shopping-cart"></i>
+                <a href="https://checkout.hepsiburada.com/sepetim" style="color: white; text-decoration: none;">
+                    ھارۋامغا سالاي</a>
+            </div>
+        </div>
+        <div class="pro1"><img
+                src="paliyet2.jpg"
+                alt="" height="300px">
+            <h3 style="text-align: center;">مېھمانلىق كۆرپە ياستۇق</h3>
+            <div style="width: 190px; background-color: #EE4C7C;height: 5px;margin-left: 50px;"></div>
+            <h3 style="direction: rtl; text-align: left; margin-left:20px ;margin-top: 35px;"> 1 يۈرۈش 300₺ <del
+                    style="color: red;"><sup>₺400</sup></del> </h3>
+            <div
+                style="width: 130px; background-color: #EE4C7C;  height: 30px; color: white; float: right;text-align: center;position: relative;top: -50px;margin-right: 20px;padding-top: 10px;border-top-left-radius: 10px;border-top-right-radius: 10px;   ">
+                <i class="fas fa-shopping-cart"></i>
+                <a href="https://checkout.hepsiburada.com/sepetim" style="color: white; text-decoration: none;">
+                    ھارۋامغا سالاي</a>
+            </div>
+
+        </div>
+        <div class="pro1"><img
+                src="paliyet4.jpg"
+                alt="" height="300px">
+
+            <h3 style="text-align: center;">داستىخان</h3>
+            <div style="width: 190px; background-color: #EE4C7C;height: 5px;margin-left: 50px;"></div>
+            <h3 style="direction: rtl; text-align: left; margin-left:20px ;margin-top: 35px;">1 دانە 100₺ <del
+                    style="color: red;"><sup>₺150</sup></del> </h3>
+            <div
+                style="width: 130px; background-color: #EE4C7C;  height: 30px; color: white; float: right;text-align: center;position: relative;top: -50px;margin-right: 20px;padding-top: 10px;border-top-left-radius: 10px;border-top-right-radius: 10px;   ">
+                <i class="fas fa-shopping-cart"></i>
+                <a href="https://checkout.hepsiburada.com/sepetim" style="color: white; text-decoration: none;">
+                    ھارۋامغا سالاي</a>
+            </div>
+
+        </div>
+
+
+        <div class="pro1"><img
+                src="paliyet1.jpg"
+                alt="" height="300px">
+            <h3 style="text-align: center;">ئەتلەس رەخىت</h3>
+            <div style="width: 190px; background-color: #EE4C7C;height: 5px;margin-left: 50px;"></div>
+            <h3 style="direction: rtl; text-align: left; margin-left:30px ;margin-top: 35px;"> مىتىرى ₺40 <del
+                    style="color: red;"><sup>₺50</sup></del> </h3>
+            <div
+                style="width: 130px; background-color: #EE4C7C;  height: 30px; color: white; float: right;text-align: center;position: relative;top: -50px;margin-right: 20px;padding-top: 10px;border-top-left-radius: 10px;border-top-right-radius: 10px;   ">
+                <i class="fas fa-shopping-cart"></i>
+                <a href="https://checkout.hepsiburada.com/sepetim" style="color: white; text-decoration: none;">
+                    ھارۋامغا سالاي</a>
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <div class="footer"
+        style="width: 95%;margin: 40px auto;background-color: #5D001E; margin-right: 60px;overflow: hidden;">
+        <ul style="position: relative; left: 30px;top: -40px;">
+
+            <li><a href="https://www.youtube.com/results?search_query=%D8%A6%DB%95%D8%AA%D9%84%DB%95%D8%B3">
+                    <i class="fab fa-youtube"></i>يۇتۇب</a></li>
+            <li><a href="https://www.facebook.com/profile.php?id=100053521201638"><i
+                        class="fab fa-facebook"></i>فېسبۇك</a></li>
+            <li><a href="https://twitter.com/"><i class="fab fa-twitter"></i>تىۋىتتىر</a></li>
+            <li><a href="https://www.instagram.com/"><i class="fab fa-instagram"></i>ئىنستېگرام</a></li>
+        </ul>
+        <ul style="margin: 10px 380px; position: relative; top: -55px;">
+            <li><a href=""><i class="fas fa-phone-alt"></i>Tel:905510203255</a></li>
+            <li><a
+                    href="https://www.google.com.tr/maps/place/Karatay%2F%E7%A7%91%E5%B0%BC%E4%BA%9A/@37.9618292,32.6704715,10z/data=!3m1!4b1!4m5!3m4!1s0x14d0c91bed3eada9:0x2fa1c7b7ab1e77d4!8m2!3d37.82322!4d32.9888285"><i
+                        class="fas fa-map-marker"></i>Adress:konya turkey</a></li>
+            <li><a href="http://127.0.0.1:5500/myproject.html/tordukini.html"><i class="fab fa-weebly"></i>Web:
+                    achil.com</a></li>
+        </ul>
+        <ul style="list-style-type: none; direction: rtl;">
+            <li><a href="#"> تور بېكىتىمىزدە دۇكان ئېچىش قەدەملىرى : </a></li>
+            <ol>
+                <li>ھىساپ ئېچىڭ</li>
+                <li>دۇكىنىڭىزنى تەھرىرلەڭ</li>
+                <li>ماللارنى يۈكلەڭ</li>
+                <li>تەشۋىقات ھەققىدە</li>
+                <li><a href="#">
+                        ياردەم
+                        <i class="fas fa-hands-helping"></i></a></li>
+            </ol>
+        </ul>
+    </div>
+</body>
+
+</html>
